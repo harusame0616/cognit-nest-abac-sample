@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-web-dev-102947-authRole",
+      "UnauthRoleArn": "arn:aws:iam::414094133283:role/amplify-web-dev-102947-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::414094133283:role/amplify-web-dev-102947-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-web-dev-102947-deployment",
+      "UnauthRoleName": "amplify-web-dev-102947-unauthRole",
+      "StackName": "amplify-web-dev-102947",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:414094133283:stack/amplify-web-dev-102947/0da15e40-ba2c-11ed-9cb9-0e9226e243cd",
+      "AmplifyAppId": "d2abc7q32d7ax0"
+    },
+    "categories": {
+      "auth": {
+        "webaef16c54": {
+          "userPoolId": "ap-northeast-1_ZVqE1OJh5",
+          "userPoolName": "cognito-nest-abac-sample",
+          "webClientId": "2ikuqdvvhe7sjeavk55pjb3khv",
+          "nativeClientId": "2ikuqdvvhe7sjeavk55pjb3khv"
+        }
+      }
+    }
+  }
+}
