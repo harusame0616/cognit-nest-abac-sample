@@ -1,0 +1,12 @@
+{
+  "name": "cognit-nestjs-access-control-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/harusame0616/cognito-nest-access-controll-sample.git",
+  "author": "Nemoto Masaharu <nemoto.masaharu.it@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "web/"
+  ]
+}
