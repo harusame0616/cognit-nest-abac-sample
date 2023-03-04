@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/harusame0616/cognito-nest-access-controll-sample.git",
   "author": "Nemoto Masaharu <nemoto.masaharu.it@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "web/"
+  ]
 }
