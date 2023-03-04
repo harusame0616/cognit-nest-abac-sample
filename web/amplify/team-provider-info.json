@@ -13,12 +13,7 @@
     },
     "categories": {
       "auth": {
-        "webaef16c54": {
-          "userPoolId": "ap-northeast-1_ZVqE1OJh5",
-          "userPoolName": "cognito-nest-abac-sample",
-          "webClientId": "2ikuqdvvhe7sjeavk55pjb3khv",
-          "nativeClientId": "2ikuqdvvhe7sjeavk55pjb3khv"
-        }
+        "webf3e25752": {}
       }
     }
   }

@@ -1,45 +1,30 @@
 {
   "auth": {
-    "webaef16c54": {
+    "webf3e25752": {
       "customAuth": false,
       "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "serviceType": "imported"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_auth_webaef16c54_nativeClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "webaef16c54"
-        }
-      ]
-    },
-    "AMPLIFY_auth_webaef16c54_userPoolId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "webaef16c54"
-        }
-      ]
-    },
-    "AMPLIFY_auth_webaef16c54_userPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "webaef16c54"
-        }
-      ]
-    },
-    "AMPLIFY_auth_webaef16c54_webClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "webaef16c54"
-        }
-      ]
+      "service": "Cognito"
     }
   }
 }
