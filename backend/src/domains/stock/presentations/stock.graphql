@@ -1,0 +1,10 @@
+type Stock {
+  id: ID!
+  product: Product!
+  quantity: Int!
+}
+
+type Query {
+  stock: Stock!
+  stocks: [Stock!]!
+}

@@ -1,10 +1,21 @@
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { GraphQLModule } from '@nestjs/graphql';
+import { StockModule } from 'src/domains/stock/stock.module';
+import { ProductModule } from './domains/product/product.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+      driver: ApolloDriver,
+      debug: true,
+      playground: true,
+      typePaths: ['./**/*.graphql'],
+    }),
+    StockModule,
+    ProductModule,
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
