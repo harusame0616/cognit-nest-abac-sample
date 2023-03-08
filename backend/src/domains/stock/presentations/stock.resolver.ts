@@ -34,7 +34,6 @@ export class StockResolver {
 
   @Query()
   stocks(): Promise<Omit<Schema.Query['stock'], 'product'>[]> {
-    console.log('stocks');
     return this.stockQueryUsecase.list();
   }
 
