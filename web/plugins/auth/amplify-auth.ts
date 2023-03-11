@@ -3,11 +3,12 @@ import { Auth, AuthUser } from './auth';
 
 export class AmplifyAuth implements Auth {
   private readonly auth: typeof AwsAuth;
-  private _user: AuthUser | null = null;
+  private _user: AuthUser;
 
   constructor(context: Parameters<typeof withSSRContext>[0]) {
     const { Auth } = withSSRContext(context);
     this.auth = Auth;
+    this._user = { isSignedIn: false };
   }
 
   isSignedIn(): boolean {
@@ -27,13 +28,14 @@ export class AmplifyAuth implements Auth {
       this._user = {
         ...currentAuth.attributes,
         credentials: currentAuth.signInUserSession.accessToken.jwtToken,
+        isSignedIn: true,
       } as AuthUser;
     } catch (e) {
-      this._user = null;
+      this._user = { isSignedIn: false };
     }
   }
 
   get user() {
-    return this._user ? { ...this._user } : null;
+    return { ...this._user };
   }
 }

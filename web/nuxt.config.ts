@@ -4,5 +4,13 @@ export default defineNuxtConfig({
     define: {
       'window.global': {},
     },
+    server: {
+      proxy: {
+        '/graphql': {
+          target: 'http://localhost:3001/graphql',
+          secure: false,
+        },
+      },
+    },
   },
 });
