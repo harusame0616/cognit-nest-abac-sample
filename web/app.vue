@@ -21,7 +21,10 @@ const login = async () => {
 </script>
 
 <template>
-  <div>
+  <div v-if="$auth.user.value.isSignedIn">
+    <NuxtPage />
+  </div>
+  <div v-else>
     <div>
       メールアドレス
       <input v-model="email" type="text" />
