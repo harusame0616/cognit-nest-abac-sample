@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { StockModule } from 'src/domains/stock/stock.module';
 import { ProductModule } from './domains/product/product.module';
+import { AuthenticationGuard } from './guards/authentication/authentication-guard';
 
 @Module({
   imports: [
@@ -16,6 +17,6 @@ import { ProductModule } from './domains/product/product.module';
     ProductModule,
   ],
   controllers: [],
-  providers: [],
+  providers: [AuthenticationGuard],
 })
 export class AppModule {}

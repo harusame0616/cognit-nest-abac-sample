@@ -37,9 +37,5 @@ const login = async () => {
     <div>
       {{ errorMessage }}
     </div>
-
-    <div>
-      {{ $auth.user }}
-    </div>
   </div>
 </template>

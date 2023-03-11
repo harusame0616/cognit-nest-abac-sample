@@ -1,10 +1,11 @@
-import { Inject } from '@nestjs/common';
+import { Inject, UseGuards } from '@nestjs/common';
 import { Args, Parent, Query, ResolveField, Resolver } from '@nestjs/graphql';
 import * as Schema from '@ResolverSchema';
 import {
   ProductQuery,
   ProductQueryUsecase,
 } from 'src/domains/product/usecases/product-query-usecase';
+import { AuthenticationGuard } from 'src/guards/authentication/authentication-guard';
 import {
   PRODUCT_QUERY_INJECT_KEY,
   STOCK_QUERY_INJECT_KEY,
@@ -13,6 +14,7 @@ import {
 import { StockQuery, StockQueryUsecase } from '../usecases/stock-query-usecase';
 
 @Resolver('Stock')
+@UseGuards(AuthenticationGuard)
 export class StockResolver {
   stockQueryUsecase: StockQueryUsecase;
   productQueryUsecase: ProductQueryUsecase;
