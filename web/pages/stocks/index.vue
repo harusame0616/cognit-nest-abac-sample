@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { list, pending } = useStocks();
+const { list, pending, error } = useStocks();
 </script>
 
 <template>
@@ -8,6 +8,7 @@ const { list, pending } = useStocks();
     <menu
       ><li><NuxtLink to="/">Index </NuxtLink></li></menu
     >
+    <div>{{ error }}</div>
     <div v-if="!pending">
       <ul>
         <li v-for="stock of list">{{ stock }}</li>

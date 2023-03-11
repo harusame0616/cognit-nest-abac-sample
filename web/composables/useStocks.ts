@@ -26,6 +26,7 @@ const useStocks = () => {
   const {
     data: list,
     pending,
+    error,
     refresh,
   } = useAsyncData(
     'useStocks',
@@ -37,6 +38,7 @@ const useStocks = () => {
   return {
     list: list,
     pending,
+    error,
     refresh,
   };
 };

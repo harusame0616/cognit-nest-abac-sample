@@ -17,7 +17,7 @@ export class AmplifyAuth implements Auth {
 
   async signIn(email: string, password: string) {
     await this.auth.signIn(email, password);
-    this.refreshUser();
+    await this.refreshUser();
 
     return this.user;
   }
