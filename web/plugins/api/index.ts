@@ -2,6 +2,8 @@ import {
   ApolloClient,
   createHttpLink,
   InMemoryCache,
+  NormalizedCache,
+  NormalizedCacheObject,
 } from '@apollo/client/core';
 import { setContext } from '@apollo/client/link/context';
 
@@ -39,12 +41,12 @@ export default defineNuxtPlugin((nuxtApp) => {
 
 declare module '#app' {
   interface NuxtApp {
-    $api: typeof ApolloClient;
+    $api: ApolloClient<NormalizedCacheObject>;
   }
 }
 
 declare module 'vue' {
   interface ComponentCustomProperties {
-    $api: typeof ApolloClient;
+    $api: ApolloClient<NormalizedCacheObject>;
   }
 }
