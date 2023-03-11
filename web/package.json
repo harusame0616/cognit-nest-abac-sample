@@ -19,7 +19,9 @@
     "prettier": "^2.8.4"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.10",
     "amplify": "^0.0.11",
-    "aws-amplify": "^5.0.16"
+    "aws-amplify": "^5.0.16",
+    "graphql": "^16.6.0"
   }
 }
