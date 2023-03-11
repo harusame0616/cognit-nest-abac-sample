@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
+import { IMProductQuery } from '../product/infrastructures/inmemory/im-product.query';
 import { IMStockQuery } from './infrastructures/inmemory/im-stock.query';
 import { StockResolver } from './presentations/stock.resolver';
 import {
-  STOCK_QUERY_INJECT_KEY,
   PRODUCT_QUERY_INJECT_KEY,
+  STOCK_QUERY_INJECT_KEY,
 } from './stock.constant';
-import { IMProductQuery } from '../product/infrastructures/inmemory/im-product.query';
 
 @Module({
   imports: [],

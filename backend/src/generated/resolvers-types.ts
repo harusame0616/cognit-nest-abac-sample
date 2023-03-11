@@ -29,6 +29,11 @@ export type Query = {
   stocks: Array<Stock>;
 };
 
+
+export type QueryStockArgs = {
+  id?: InputMaybe<Scalars['ID']>;
+};
+
 export type Stock = {
   __typename?: 'Stock';
   id: Scalars['ID'];
@@ -137,7 +142,7 @@ export type ProductResolvers<ContextType = any, ParentType extends ResolversPare
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
   product?: Resolver<ResolversTypes['Product'], ParentType, ContextType>;
   products?: Resolver<Array<ResolversTypes['Product']>, ParentType, ContextType>;
-  stock?: Resolver<ResolversTypes['Stock'], ParentType, ContextType>;
+  stock?: Resolver<ResolversTypes['Stock'], ParentType, ContextType, Partial<QueryStockArgs>>;
   stocks?: Resolver<Array<ResolversTypes['Stock']>, ParentType, ContextType>;
 }>;
 
