@@ -27,12 +27,15 @@ const useStocks = () => {
     data: list,
     pending,
     refresh,
-  } = useLazyAsyncData('useStocks', async () =>
-    $api.query<Stock[]>({ query: allStocksQuery })
+  } = useAsyncData(
+    'useStocks',
+    async () =>
+      (await $api.query<{ stocks: Stock[] }>({ query: allStocksQuery })).data
+        .stocks
   );
 
   return {
-    list,
+    list: list,
     pending,
     refresh,
   };
