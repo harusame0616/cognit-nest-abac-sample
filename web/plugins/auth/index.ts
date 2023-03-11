@@ -7,7 +7,7 @@ const authPlugin = async () => {
   });
   await auth.refreshUser();
 
-  const user = ref<AuthUser | {}>(auth.user ?? {});
+  const user = ref<AuthUser>(auth.user);
 
   return {
     provide: {
