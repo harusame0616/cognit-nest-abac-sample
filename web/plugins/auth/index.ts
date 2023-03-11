@@ -14,7 +14,7 @@ const authPlugin = async () => {
       auth: {
         async signIn(email: string, password: string) {
           const _user = await auth.signIn(email, password);
-          if (_user) {
+          if (_user.isSignedIn) {
             user.value = _user;
           } else {
             throw new Error('ログインに失敗しました。');

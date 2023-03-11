@@ -28,6 +28,7 @@ export class AmplifyAuth implements Auth {
       this._user = {
         ...currentAuth.attributes,
         credentials: currentAuth.signInUserSession.accessToken.jwtToken,
+        isSignedIn: true,
       } as AuthUser;
     } catch (e) {
       this._user = { isSignedIn: false };

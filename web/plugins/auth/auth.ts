@@ -15,7 +15,7 @@ export type NoAuthenticatedUser = {
 export type AuthUser = AuthenticatedUser | NoAuthenticatedUser;
 
 export type Auth = {
-  signIn(email: string, password: string): Promise<AuthUser | null>;
+  signIn(email: string, password: string): Promise<AuthUser>;
   refreshUser(): Promise<void>;
   isSignedIn(): boolean;
   user: AuthUser;
